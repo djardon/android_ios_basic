@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_heroes">
+
+    <fragment
+        android:id="@+id/navigation_heroes"
+        android:name="com.ds.basicapp.ui.heroes.HeroFragment"
+        android:label="@string/title_heroes"
+        tools:layout="@layout/fragment_heroes">
+        <action
+            android:id="@+id/action_heroesFragment_to_characterFragment"
+            app:destination="@id/navigation_character">
+            <argument
+                android:name="character"
+                app:argType="com.ds.basicapp.domain.models.Character"/>
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_villains"
+        android:name="com.ds.basicapp.ui.villains.VillainsFragment"
+        android:label="@string/title_villains"
+        tools:layout="@layout/fragment_villains">
+        <action
+            android:id="@+id/action_villainsFragment_to_characterFragment"
+            app:destination="@id/navigation_character">
+            <argument
+                android:name="character"
+                app:argType="com.ds.basicapp.domain.models.Character"/>
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_character"
+        android:name="com.ds.basicapp.ui.character.CharacterFragment"
+        android:label="@string/title_character"
+        tools:layout="@layout/fragment_character">
+
+        <argument
+            android:name="character"
+            app:argType="com.ds.basicapp.domain.models.Character"/>
+    </fragment>
+</navigation>

@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">SuperHeroesApp</string>
+    <string name="title_heroes">Heroes</string>
+    <string name="title_villains">Villains</string>
+    <string name="title_character">Character</string>
+</resources>
